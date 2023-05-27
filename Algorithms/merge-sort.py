@@ -1,4 +1,6 @@
 # Merge Sort: Merge Sort is a divide-and-conquer algorithm that recursively divides the input list into smaller sublists, sorts them, and then merges them to obtain a sorted output. 
+#  The code includes a merge_sort function that recursively divides the list and calls a merge function to merge the sorted sublists. 
+# The sorted list is then printed. Additionally, the code measures the execution time of the sorting process using the timeit module and prints the result.
 # It has a time complexity of O(n log n) in all cases, making it efficient for large data sets.
 
 
