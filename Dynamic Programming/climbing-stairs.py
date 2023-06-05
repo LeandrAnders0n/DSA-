@@ -6,8 +6,8 @@
 # The result is stored in the climb array.
  
 def climbing_stairs(n):
-    if n <=2:
-        return 2
+    if n <=1:
+        return 1
     climb=[0]*(n+1)
 
     climb[1]=1
