@@ -1,4 +1,4 @@
-#Question
+#Question:Merge Intervals
 # Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
 
 #Approach:The code sorts the intervals based on their start times and merges overlapping intervals by updating the end time of the last merged interval if necessary. It returns a list of non-overlapping intervals that cover all the intervals in the input.
