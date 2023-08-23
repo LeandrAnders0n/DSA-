@@ -5,6 +5,10 @@
 # Return the maximum number of consecutive 'T's or 'F's in the answer key after performing the operation at most k times.
 
 #Approach: Sliding Window
+# Calculate the maximum consecutive sequence length of either "T" or "F" answers in the given answerKey string, with the constraint of allowing at most k changes. It uses a sliding window approach, maintaining a window between left and right pointers. The count dictionary tracks the occurrences of "T" and "F" within the window, and the result variable tracks the current sequence length. The left pointer is moved as needed to satisfy the change constraint. The maximum sequence length encountered is stored in max_result and returned.
+# Time complexity: O(N)
+# Space complexity: O(1)
+
 
 def max_confusion(answerKey,k):
     # Store the count in the current sliding window
