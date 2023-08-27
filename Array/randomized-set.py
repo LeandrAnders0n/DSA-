@@ -6,7 +6,7 @@
 # int getRandom() Returns a random element from the current set of elements (it's guaranteed that at least one element exists when this method is called). Each element must have the same probability of being returned.
 # You must implement the functions of the class such that each function works in average O(1) time complexity.
 
-# Time Complexity: O(n)
+# Average Time Complexity: O(1)
 # Space Complexity: O(1)
 
 import random
