@@ -16,7 +16,9 @@ def isSymmetric(root):
             return True
         if not left or not right:
             return False
-        return left.val == right.val and check_symmetry(left.left, right.right) and check_symmetry(left.right, right.left)
+        return left.val == right.val and \
+        check_symmetry(left.left, right.right) and \
+        check_symmetry(left.right, right.left)
     
     return check_symmetry(root.left, root.right)
 
