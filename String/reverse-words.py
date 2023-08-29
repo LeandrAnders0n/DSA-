@@ -7,6 +7,8 @@
 #Approach:
 # Convert the input string to a mutable list. Reverse the entire list to reverse the order of characters in the string. Then, individually reverse each word's characters by tracking word boundaries using two pointers. Reverse the last word separately. Finally, join the reversed characters back into words and adjust spacing to return the reversed string.
 
+#Time Complexity: O(n)
+#Space Complexity: O(1)
 
 def reverse_words(s):
     def reverse_range(start, end):
