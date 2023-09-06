@@ -1,3 +1,11 @@
 A tree is a datastructure, that contains one root and many child elements. Each element of a tree is called a node.
 In a binary tree structure, each node can have at most 2 children.
 The end nodes, that do not have children are called the leaf nodes.
+
+This code creates a binary tree and then defines four functions for traversing the tree:
+BFS:
+level_order() traverses the tree level by level, printing the data of each node in the same order.
+DFS:
+in_order() traverses the tree in-order, printing the data of the left subtree, the root, and the right subtree.
+pre_order() traverses the tree pre-order, printing the data of the root, the left subtree, and the right subtree.
+post_order() traverses the tree post-order, printing the data of the left subtree, the right subtree, and the root.
