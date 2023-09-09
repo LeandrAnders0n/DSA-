@@ -1,6 +1,5 @@
-#Question: Construct Binary Tree from Preorder and Inorder Traversal
-#Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
-
+#Question: Construct Binary Tree from Inorder and Postorder Traversal
+# Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.
 #Approach:
 # Construct a binary tree from its inorder and postorder traversals using recursion. Extract the root value from the end of the postorder list, find its position in the inorder list to divide it into left and right subtrees, and then recursively build these subtrees. 
 
