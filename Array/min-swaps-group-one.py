@@ -1,4 +1,5 @@
-#Question: You are given a binary array (with only 1s and 0s), and you are supposed to bring all the 1s to the right and all the 0s to the left, or vice-versa. The operation that can be performed is to swap two adjacent values, find the minimum number of operations needed.
+#Question: Minimum adjacent swaps required to Sort Binary array
+# You are given a binary array (with only 1s and 0s), and you are supposed to bring all the 1s to the right and all the 0s to the left, or vice-versa. The operation that can be performed is to swap two adjacent values, find the minimum number of operations needed.
 #Approach:
 # Iterate through the array from right to left, counting unplaced zeros and adding this count to the total swaps needed when encountering ones. 
 
