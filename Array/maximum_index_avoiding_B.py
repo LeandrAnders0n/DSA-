@@ -18,6 +18,9 @@
 
 # In summary, the sum of 2^(N-i-1) for each non-excluded iteration calculates the maximum reachable index in a binary system by considering the contributions of each bit, excluding the bit represented by `B`.
 
+# Time Complexity: O(n) 
+# Space Complexity: O(1)
+
 import math
 def max_index_reached(N, B):
     max_index=0
