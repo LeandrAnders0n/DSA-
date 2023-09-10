@@ -23,7 +23,7 @@
 
 # Function to convert a Roman numeral to its decimal value
 def roman_to_decimal(roman):
-    roman_dict={'I':1,'V':5,'X':5,'L':50}
+    roman_dict={'I':1,'V':5,'X':10,'L':50}
     decimal=0
     prev_value=0
 
