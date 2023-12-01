@@ -10,25 +10,18 @@
 # Space complexity is O(k), where k is the number of unique characters in the string.
 
 def longest_palindrome(str):
-    char_count={}
-    odd_count=0
+    set_=set()
 
-    for char in str:
-        char_count[char]=char_count.get(char,0)+1
+    for s in str:
+        if s not in set_:
+            set_.add(s)
+        else:
+            set_.remove(s)
     
-    for count in char_count.values():
-        if count %2!=0:
-            odd_count+=1
-    
-    longest_palindrome=len(s)-odd_count+(odd_count>0)
+    if len(set_)!=0:
+        return len(str)-len(set_)+1
 
-    return longest_palindrome
-
-
-
-
-
-
+    return len(s)
 
 
 s = "abccccdd"
