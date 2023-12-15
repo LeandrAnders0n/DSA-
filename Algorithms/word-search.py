@@ -2,7 +2,10 @@
 # Given an m x n grid of characters board and a string word, return true if word exists in the grid.
 # The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
 
-#Approach:
+#Approach: Backtracking
+# The approach employs a recursive backtracking strategy to explore possible paths on the board for the specified word. Each cell is visited, and if it matches the corresponding character in the word, the algorithm proceeds to explore adjacent cells in all four directions. The visited cell is temporarily marked, and if the exploration results in a valid path, the algorithm returns True. In case of a mismatch or reaching the end of the word, the algorithm backtracks by restoring the original value of the cell.
+# Time complexity is exponential, O(4^(mn)), where m and n are the dimensions of the board, due to the four possible directions at each step
+# Space complexity is determined by the recursive call stack and is O(mn).
 
 from typing import List
 
