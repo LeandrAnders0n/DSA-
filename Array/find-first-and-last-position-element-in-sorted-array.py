@@ -3,17 +3,42 @@
 # If target is not found in the array, return [-1, -1].
 # You must write an algorithm with O(log n) runtime complexity.
 
+
+# Approach:
+# The code uses a binary search approach to find the first and last occurrences of the target element in a sorted array. Two separate binary searches are performed to find the first and last occurrences, updating the search range accordingly.
+
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        first, last = -1, -1
-        for i in range(len(nums)):
-            if nums[i] == target:
-                if first == -1:
-                    first = i
-                last = i
+        def binary_search(nums, target, find_first):
+            result = -1
+            low, high = 0, len(nums) - 1
+
+            while low <= high:
+                mid = (low + high) // 2
+
+                if nums[mid] == target:
+                    result = mid
+                    if find_first:
+                        high = mid - 1 
+                    else:
+                        low = mid + 1  
+                elif nums[mid] < target:
+                    low = mid + 1
+                else:
+                    high = mid - 1
+
+            return result
+
+        first = binary_search(nums, target, True)
+        last = binary_search(nums, target, False)
+
         return [first, last]
+
 
 s=Solution()
 # Example 1:
