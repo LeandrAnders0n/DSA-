@@ -3,33 +3,27 @@
 # Note: You can only move either down or right at any point in time.
 
 #Approach: Dynamic Programming
-# Initialize a 2D table `dp` to store the minimum path sum at each cell. The top-left cell is set to the grid's value. Iterate through the grid, and update each cell in `dp` by considering the minimum sum from either the cell above or the cell to the left. The result is the value in the bottom-right cell of `dp`, representing the minimum path sum. 
-# Time & Space Complexity: O(m * n), where m is the number of rows and n is the number of columns in the grid.
+# Follow a bottom-up dynamic programming approach. Iterate through the given grid, updating each cell by adding the minimum of the values from the cell above and the cell to the left. Start from the top-left corner and progress towards the bottom-right corner, ensuring that each cell's value represents the minimum path sum to reach that cell. The final result is the value in the bottom-right cell, representing the minimum path sum for the entire grid.
+# Time Complexity: O(m * n)
+#Space Complexity: O(1)
 
 from typing import List 
 
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
-        if not grid or not grid[0]:
-            return 0
-
-        m, n = len(grid), len(grid[0])
-
-        dp = [[0] * n for _ in range(m)]
-
-        dp[0][0] = grid[0][0]
-
-        for i in range(1, m):
-            dp[i][0] = dp[i - 1][0] + grid[i][0]
-
-        for j in range(1, n):
-            dp[0][j] = dp[0][j - 1] + grid[0][j]
-
-        for i in range(1, m):
-            for j in range(1, n):
-                dp[i][j] = grid[i][j] + min(dp[i - 1][j], dp[i][j - 1])
-
-        return dp[m - 1][n - 1]
+        n=len(grid)
+        m=len(grid[0])
+        for i in range(n):
+            for j in range(m):
+                if i==0:
+                    if j!=0:
+                        grid[i][j]+=grid[i][j-1]
+                elif j==0:
+                    if i!=0:
+                        grid[i][j]+=grid[i-1][j]
+                else:
+                    grid[i][j]+=min(grid[i-1][j],grid[i][j-1])
+        return grid[n-1][m-1]
 
 s=Solution()
 # Example 1:
