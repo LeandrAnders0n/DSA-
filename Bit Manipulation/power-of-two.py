@@ -7,7 +7,7 @@
 #Approach: Bit Manipulation
 # Check whether a given integer n is a power of two. The function returns True if n is a positive integer and the bitwise AND operation between n and n - 1 results in 0, indicating that n has only one bit set to 1, a characteristic of powers of two. 
 
-# Time & Space Complexity: O(n)
+# Time & Space Complexity: O(1)
 
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
