@@ -5,6 +5,7 @@
 #Approach:
 # Utilize the range constraint of the integers (from 1 to n) to map each integer to its corresponding index in the array. During traversal, each encountered number is then used to determine its appropriate index (by subtracting 1 due to zero-based indexing). If the number at this index is already negative, it implies that the current number has been encountered before, hence it's a duplicate, and it's added to the result list. Otherwise, the number at that index is negated to indicate its presence. 
 
+from typing import List
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
         result = []
@@ -31,7 +32,7 @@ nums = [1,1,2]
 print(s.findDuplicates(nums))
 # Expected Output: [1]
 
-Example 3:
+# Example 3:
 nums = [1]
 print(s.findDuplicates(nums))
 # Expected Output: []
